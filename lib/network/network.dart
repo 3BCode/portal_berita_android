@@ -20,4 +20,20 @@ class NetworkURL {
   static String profilEditGambar() {
     return "$server/API/profilEditGambar.php";
   }
+
+  static String informasi() {
+    return "$server/API/informasi.php";
+  }
+
+  static String informasiTambah() {
+    return "$server/API/informasiTambah.php";
+  }
+
+  static String informasiEdit() {
+    return "$server/API/informasiEdit.php";
+  }
+
+  static String informasiHapus() {
+    return "$server/API/informasiHapus.php";
+  }
 }
