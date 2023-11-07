@@ -144,7 +144,7 @@ class _LoginState extends State<Login> {
                     height: 150,
                   ),
                   const Text(
-                    "Aplikasi Baca Berita LP3I",
+                    "Aplikasi Baca Berita",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
