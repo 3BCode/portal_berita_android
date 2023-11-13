@@ -1,10 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:photo_view/photo_view.dart';
 import 'package:portal_berita/custom/customButton.dart';
 import 'package:portal_berita/custom/info_card.dart';
-import 'package:portal_berita/model/informasi_model.dart';
 import 'package:portal_berita/model/profil_model.dart';
 import 'package:portal_berita/network/network.dart';
 import 'package:portal_berita/screen/login/login.dart';
