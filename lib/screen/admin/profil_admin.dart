@@ -8,6 +8,7 @@ import 'package:portal_berita/network/network.dart';
 import 'package:portal_berita/screen/admin/profil_admin_edit.dart';
 import 'package:portal_berita/screen/admin/profil_admin_edit_gambar.dart';
 import 'package:portal_berita/screen/login/login.dart';
+import 'package:portal_berita/screen/user/profil_user_gambar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
@@ -160,10 +161,24 @@ class _ProfilAdminState extends State<ProfilAdmin> {
                               const SizedBox(
                                 height: 10,
                               ),
-                              CircleAvatar(
-                                radius: 50,
-                                backgroundImage: NetworkImage(
-                                  '${NetworkURL.server}../image/${a.gambar}',
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            ProfilUserGambar(a, onRefresh),
+                                      ),
+                                    );
+                                  },
+                                  child: CircleAvatar(
+                                    radius: 50,
+                                    backgroundImage: NetworkImage(
+                                      '${NetworkURL.server}../image/${a.gambar}',
+                                    ),
+                                  ),
                                 ),
                               ),
                               IconButton(
