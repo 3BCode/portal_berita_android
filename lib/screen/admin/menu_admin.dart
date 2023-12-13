@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portal_berita/screen/admin/about.dart';
 import 'package:portal_berita/screen/admin/home_admin.dart';
 import 'package:portal_berita/screen/admin/profil_admin.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -57,6 +58,10 @@ class _MenuAdminState extends State<MenuAdmin> {
             ),
             Offstage(
               offstage: selectIndex != 1,
+              child: const About(),
+            ),
+            Offstage(
+              offstage: selectIndex != 2,
               child: const ProfilAdmin(),
             ),
           ],
@@ -97,15 +102,35 @@ class _MenuAdminState extends State<MenuAdmin> {
                   },
                   child: Tab(
                     icon: Icon(
-                      Icons.account_circle,
+                      Icons.desktop_access_disabled_outlined,
                       size: 30.0,
                       color: selectIndex == 1 ? Colors.blue : Colors.grey,
+                    ),
+                    child: Text(
+                      'About',
+                      style: TextStyle(
+                          fontSize: 10.0,
+                          color: selectIndex == 1 ? Colors.blue : Colors.grey),
+                    ),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      selectIndex = 2;
+                    });
+                  },
+                  child: Tab(
+                    icon: Icon(
+                      Icons.account_circle,
+                      size: 30.0,
+                      color: selectIndex == 2 ? Colors.blue : Colors.grey,
                     ),
                     child: Text(
                       'Profil',
                       style: TextStyle(
                           fontSize: 10.0,
-                          color: selectIndex == 1 ? Colors.blue : Colors.grey),
+                          color: selectIndex == 2 ? Colors.blue : Colors.grey),
                     ),
                   ),
                 ),
